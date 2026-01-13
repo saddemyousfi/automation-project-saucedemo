@@ -1,0 +1,16 @@
+{
+  "urls": {
+    "base": "https://www.saucedemo.com"
+  },
+  "credentials": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "selectors": {
+    "username_input": "id=user-name",
+    "password_input": "id=password",
+    "login_button": "id=login-button",
+    "burger_menu": "id=react-burger-menu-btn",
+    "logout_link": "id=logout_sidebar_link"
+  }
+}

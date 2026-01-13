@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-13T12:39:52.026588" rpa="false" schemaversion="5">
+<suite id="s1" name="Navigation Menu" source="C:\Users\User\Documents\automation-project-saucedemo\robot_tests\navigation_menu.robot">
+<kw name="Load Configuration" owner="keywords" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${config} = {'urls': {'base': 'https://www.saucedemo.com'}, 'credentials': {'username': 'standard_user', 'password': 'secret_sauce'}, 'selectors': {'username_input': 'id=user-name', 'password_input': 'id=password...</msg>
+<var>${config}</var>
+<arg>__import__('json').load(open(r'''${DATA_FILE}''','r',encoding='utf-8'))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.265907" elapsed="0.004511"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${BASE_URL} = https://www.saucedemo.com</msg>
+<arg>${BASE_URL}</arg>
+<arg>${config["urls"]["base"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${USERNAME} = standard_user</msg>
+<arg>${USERNAME}</arg>
+<arg>${config["credentials"]["username"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${PASSWORD} = secret_sauce</msg>
+<arg>${PASSWORD}</arg>
+<arg>${config["credentials"]["password"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${USERNAME_INPUT} = id=user-name</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${config["selectors"]["username_input"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${PASSWORD_INPUT} = id=password</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${config["selectors"]["password_input"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${LOGIN_BUTTON} = id=login-button</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<arg>${config["selectors"]["login_button"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${BURGER_MENU} = id=react-burger-menu-btn</msg>
+<arg>${BURGER_MENU}</arg>
+<arg>${config["selectors"]["burger_menu"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">${LOGOUT_LINK} = id=logout_sidebar_link</msg>
+<arg>${LOGOUT_LINK}</arg>
+<arg>${config["selectors"]["logout_link"]}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-01-13T12:39:52.265907" elapsed="0.004511"/>
+</kw>
+<test id="s1-t1" name="Navigation dans le menu burger" line="7">
+<kw name="Open Application" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-13T12:39:52.270418" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="5.092919"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.364324" elapsed="0.062388"/>
+</kw>
+<status status="PASS" start="2026-01-13T12:39:52.270418" elapsed="5.157391"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.428824" elapsed="0.049289"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-13T12:39:57.478113" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.478113" elapsed="0.208618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.686731" elapsed="0.022852"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-13T12:39:57.709583" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.709583" elapsed="0.078277"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.787860" elapsed="0.019851"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-13T12:39:57.807711" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.807711" elapsed="0.100399"/>
+</kw>
+<status status="PASS" start="2026-01-13T12:39:57.428824" elapsed="0.479286"/>
+</kw>
+<kw name="Open Burger Menu" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BURGER_MENU}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.910723" elapsed="0.011099"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-13T12:39:57.921822" level="INFO">Clicking button 'id=react-burger-menu-btn'.</msg>
+<arg>${BURGER_MENU}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-13T12:39:57.921822" elapsed="0.090435"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.bm-menu</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-13T12:39:58.012257" elapsed="0.028118"/>
+</kw>
+<status status="PASS" start="2026-01-13T12:39:57.908110" elapsed="0.132265"/>
+</kw>
+<kw name="Verify Burger Menu Links" owner="keywords">
+<kw name="Open Burger Menu" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BURGER_MENU}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-13T12:39:58.040375" elapsed="0.020409"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-13T12:39:58.061559" level="INFO">Clicking button 'id=react-burger-menu-btn'.</msg>
+<msg time="2026-01-13T12:39:59.270530" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-13T12:39:59.270530" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e06388d5
+	0x7ff6e0638930
+	0x7ff6e041165d
+	0x7ff6e04719e8
+	0x7ff6e046f40f
+	0x7ff6e046c417
+	0x7ff6e046b338
+	0x7ff6e045ce7f
+	0x7ff6e0491fda
+	0x7ff6e045c746
+	0x7ff6e04bac97
+	0x7ff6e045ac29
+	0x7ff6e045ba93
+	0x7ff6e0950620
+	0x7ff6e094af60
+	0x7ff6e09696c6
+	0x7ff6e0655dd4
+	0x7ff6e065ed7c
+	0x7ff6e0641ff4
+	0x7ff6e06421a5
+	0x7ff6e0627ed2
+	0x7ff84fd1e8d7
+	0x7ff85118c53c
+</msg>
+<arg>${BURGER_MENU}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2026-01-13T12:39:58.061559" elapsed="1.209972">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e06388d5
+	0x7ff6e0638930
+	0x7ff6e041165d
+	0x7ff6e04719e8
+	0x7ff6e046f40f
+	0x7ff6e046c417
+	0x7ff6e046b338
+	0x7ff6e045ce7f
+	0x7ff6e0491fda
+	0x7ff6e045c746
+	0x7ff6e04bac97
+	0x7ff6e045ac29
+	0x7ff6e045ba93
+	0x7ff6e0950620
+	0x7ff6e094af60
+	0x7ff6e09696c6
+	0x7ff6e0655dd4
+	0x7ff6e065ed7c
+	0x7ff6e0641ff4
+	0x7ff6e06421a5
+	0x7ff6e0627ed2
+	0x7ff84fd1e8d7
+	0x7ff85118c53c
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.bm-menu</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-13T12:39:58.040375" elapsed="1.232156">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e06388d5
+	0x7ff6e0638930
+	0x7ff6e041165d
+	0x7ff6e04719e8
+	0x7ff6e046f40f
+	0x7ff6e046c417
+	0x7ff6e046b338
+	0x7ff6e045ce7f
+	0x7ff6e0491fda
+	0x7ff6e045c746
+	0x7ff6e04bac97
+	0x7ff6e045ac29
+	0x7ff6e045ba93
+	0x7ff6e0950620
+	0x7ff6e094af60
+	0x7ff6e09696c6
+	0x7ff6e0655dd4
+	0x7ff6e065ed7c
+	0x7ff6e0641ff4
+	0x7ff6e06421a5
+	0x7ff6e0627ed2
+	0x7ff84fd1e8d7
+	0x7ff85118c53c
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=inventory_sidebar_link</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=inventory_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=inventory_container</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<kw name="Open Burger Menu" owner="keywords">
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=about_sidebar_link</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=about_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Sauce Labs</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.272531" elapsed="0.000000"/>
+</kw>
+<kw name="Open Burger Menu" owner="keywords">
+<status status="NOT RUN" start="2026-01-13T12:39:59.273531" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=reset_sidebar_link</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.273531" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=reset_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.273531" elapsed="0.000000"/>
+</kw>
+<kw name="Close Burger Menu" owner="keywords">
+<status status="NOT RUN" start="2026-01-13T12:39:59.273531" elapsed="0.000000"/>
+</kw>
+<kw name="Open Burger Menu" owner="keywords">
+<status status="NOT RUN" start="2026-01-13T12:39:59.273531" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.273531" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-13T12:39:59.273531" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-13T12:39:58.040375" elapsed="1.233156">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e06388d5
+	0x7ff6e0638930
+	0x7ff6e041165d
+	0x7ff6e04719e8
+	0x7ff6e046f40f
+	0x7ff6e046c417
+	0x7ff6e046b338
+	0x7ff6e045ce7f
+	0x7ff6e0491fda
+	0x7ff6e045c746
+	0x7ff6e04bac97
+	0x7ff6e045ac29
+	0x7ff6e045ba93
+	0x7ff6e0950620
+	0x7ff6e094af60
+	0x7ff6e09696c6
+	0x7ff6e0655dd4
+	0x7ff6e065ed7c
+	0x7ff6e0641ff4
+	0x7ff6e06421a5
+	0x7ff6e0627ed2
+	0x7ff84fd1e8d7
+	0x7ff85118c53c
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-13T12:39:59.274476" elapsed="2.192637"/>
+</kw>
+<status status="FAIL" start="2026-01-13T12:39:52.270418" elapsed="9.198201">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e06388d5
+	0x7ff6e0638930
+	0x7ff6e041165d
+	0x7ff6e04719e8
+	0x7ff6e046f40f
+	0x7ff6e046c417
+	0x7ff6e046b338
+	0x7ff6e045ce7f
+	0x7ff6e0491fda
+	0x7ff6e045c746
+	0x7ff6e04bac97
+	0x7ff6e045ac29
+	0x7ff6e045ba93
+	0x7ff6e0950620
+	0x7ff6e094af60
+	0x7ff6e09696c6
+	0x7ff6e0655dd4
+	0x7ff6e065ed7c
+	0x7ff6e0641ff4
+	0x7ff6e06421a5
+	0x7ff6e0627ed2
+	0x7ff84fd1e8d7
+	0x7ff85118c53c
+</status>
+</test>
+<status status="FAIL" start="2026-01-13T12:39:52.026588" elapsed="9.442031"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Navigation Menu" id="s1" pass="0" fail="1" skip="0">Navigation Menu</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
