@@ -1,6 +1,3 @@
 *** Variables ***
-${USERNAME_INPUT}
-${PASSWORD_INPUT}
-${LOGIN_BUTTON}
-${BURGER_MENU}
-${LOGOUT_LINK}
+# Optional: if you want Robot variables instead of JSON
+# But we will mainly use JSON for dynamic variables
