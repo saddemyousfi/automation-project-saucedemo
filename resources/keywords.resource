@@ -2,6 +2,7 @@
 Library           SeleniumLibrary
 Variables         config.json
 
+
 *** Keywords ***
 Login To Swag Labs
     [Arguments]    ${username}    ${password}
@@ -29,14 +30,28 @@ Verify Sidebar Options
         Element Should Contain    ${locators['menu_container']}    ${option}
     END
 
+*** Keywords ***
+# ... (Keep existing Login and Open Sidebar keywords)
+
+Add Item To Cart
+    [Documentation]    Adds the first available item to the cart and verifies the badge appears.
+    Wait Until Element Is Visible    ${locators['add_to_cart_btn']}    timeout=5s
+    Click Button                     ${locators['add_to_cart_btn']}
+    Wait Until Element Is Visible    ${locators['cart_badge']}         timeout=5s
+    Element Text Should Be           ${locators['cart_badge']}         1
+
 Reset App State And Verify Cart
+    [Documentation]    Resets the state and ensures the cart badge is removed.
     Open Sidebar Menu
     Wait Until Element Is Visible    ${locators['reset_link']}
     Click Element     ${locators['reset_link']}
+    
     # Close the menu to check the cart badge on the main page
     Execute Javascript    document.getElementById('react-burger-cross-btn').click()
-    Sleep    0.5s
-    Element Should Not Be Visible    ${locators['cart_badge']}
+    
+    # Verify the cart is now empty (badge should disappear)
+    Wait Until Element Is Not Visible    ${locators['cart_badge']}     timeout=5s
+    Element Should Not Be Visible        ${locators['cart_badge']}
 
 Logout From App
     Open Sidebar Menu

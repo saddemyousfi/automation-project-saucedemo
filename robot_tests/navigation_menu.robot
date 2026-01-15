@@ -21,11 +21,11 @@ Validate Burger Menu Functionality
     Click Element    ${locators['item_link']}
     Wait Until Location Is    ${URL}inventory.html
     
-    # 6. About Link (Includes retry logic if click fails to register)
+    # 6. About Link
     Open Sidebar Menu
     Click Element    ${locators['about_link']}
     
-    # Monitor for navigation; if browser stays on inventory, click again
+    # Monitor for navigation
     ${status}=    Run Keyword And Return Status    Wait Until Location Contains    saucelabs.com    timeout=7s
     IF    not ${status}
         Click Element    ${locators['about_link']}
@@ -35,10 +35,13 @@ Validate Burger Menu Functionality
     # 7. Return to App
     Go Back
     Wait Until Location Contains    inventory.html    timeout=10s
-    Reload Page    # Reset the JS state after returning from external domain
+    Reload Page
     Wait Until Element Is Visible    ${locators['menu_btn']}    timeout=10s
+
+    # 7.5 ADDED STEP: Add a product to ensure Reset has something to clear
+    Add Item To Cart
     
-    # 8 & 9. Reset App State
+    # 8 & 9. Reset App State (Now validates the badge disappears)
     Reset App State And Verify Cart
     
     # 10 & 11. Logout and Verify Login Page

@@ -14,12 +14,17 @@
     "reset_link": "id=reset_sidebar_link",
     "logout_link": "id=logout_sidebar_link",
     "cart_badge": "class=shopping_cart_badge",
-    "add_cart_btn": "id=add-to-cart-sauce-labs-backpack",
+    "add_to_cart_btn": "id=add-to-cart-sauce-labs-backpack",
     "inventory_item": "class=inventory_item",
     "item_img": "css=.inventory_item_img img",
     "item_add_btn": "css=button[id^='add-to-cart']",
     "item_name_link": "class=inventory_item_name",
     "back_to_products": "id=back-to-products"
   },
-  "menu_labels": ["All Items", "About", "Logout", "Reset App State"]
+  "menu_labels": [
+    "All Items",
+    "About",
+    "Logout",
+    "Reset App State"
+  ]
 }

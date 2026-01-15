@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-14T11:10:02.223068" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-15T09:36:09.531481" rpa="false" schemaversion="5">
 <suite id="s1" name="Navigation Menu" source="C:\Users\User\Documents\automation-project-saucedemo\robot_tests\navigation_menu.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2026-01-14T11:10:02.437955" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-01-15T09:36:09.721379" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-01-14T11:10:02.437955" elapsed="2.337756"/>
+<status status="PASS" start="2026-01-15T09:36:09.720360" elapsed="2.616649"/>
 </kw>
 <test id="s1-t1" name="Validate Burger Menu Functionality" line="10">
 <kw name="Login To Swag Labs" owner="keywords">
@@ -14,54 +14,54 @@
 <arg>${locators['login_user']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:04.787101" elapsed="0.046527"/>
+<status status="PASS" start="2026-01-15T09:36:12.341746" elapsed="0.042046"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:04.834640" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2026-01-15T09:36:12.384793" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>${locators['login_user']}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-14T11:10:04.834640" elapsed="0.123185"/>
+<status status="PASS" start="2026-01-15T09:36:12.384793" elapsed="0.106620"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:04.959843" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2026-01-14T11:10:05.021304" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-01-15T09:36:12.495306" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-01-15T09:36:12.520146" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${locators['login_pass']}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-14T11:10:04.957825" elapsed="0.142859"/>
+<status status="PASS" start="2026-01-15T09:36:12.491413" elapsed="0.080526"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:05.101460" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-01-15T09:36:12.571939" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>${locators['login_btn']}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-14T11:10:05.101460" elapsed="0.099126"/>
+<status status="PASS" start="2026-01-15T09:36:12.571939" elapsed="0.169037"/>
 </kw>
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>inventory.html</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2026-01-14T11:10:05.201613" elapsed="0.006523"/>
+<status status="PASS" start="2026-01-15T09:36:12.740976" elapsed="0.013587"/>
 </kw>
 <arg>${USER}</arg>
 <arg>${PASS}</arg>
-<status status="PASS" start="2026-01-14T11:10:04.786031" elapsed="0.423110"/>
+<status status="PASS" start="2026-01-15T09:36:12.339029" elapsed="0.415534"/>
 </kw>
 <kw name="Open Sidebar Menu" owner="keywords">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:05.317089" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-01-14T11:10:05.317089" level="FAIL">The element 'id=logout_sidebar_link' should be visible, but it is not.</msg>
+<msg time="2026-01-15T09:36:12.888909" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-15T09:36:12.888909" level="FAIL">The element 'id=logout_sidebar_link' should be visible, but it is not.</msg>
 <arg>${locators['logout_link']}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-01-14T11:10:05.211006" elapsed="0.108087">The element 'id=logout_sidebar_link' should be visible, but it is not.</status>
+<status status="FAIL" start="2026-01-15T09:36:12.760045" elapsed="0.131890">The element 'id=logout_sidebar_link' should be visible, but it is not.</status>
 </kw>
-<msg time="2026-01-14T11:10:05.319093" level="INFO">${is_open} = False</msg>
+<msg time="2026-01-15T09:36:12.892970" level="INFO">${is_open} = False</msg>
 <var>${is_open}</var>
 <arg>Element Should Be Visible</arg>
 <arg>${locators['logout_link']}</arg>
 <doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-01-14T11:10:05.209936" elapsed="0.109157"/>
+<status status="PASS" start="2026-01-15T09:36:12.754563" elapsed="0.138407"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${is_open}">
@@ -69,117 +69,117 @@
 <arg>${locators['menu_btn']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:05.320102" elapsed="0.029636"/>
+<status status="PASS" start="2026-01-15T09:36:12.893905" elapsed="0.018829"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:05.350245" level="INFO">Executing JavaScript:
+<msg time="2026-01-15T09:36:12.912734" level="INFO">Executing JavaScript:
 document.getElementById('react-burger-menu-btn').click()
 Without any arguments.</msg>
 <arg>document.getElementById('react-burger-menu-btn').click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-01-14T11:10:05.349738" elapsed="0.009705"/>
+<status status="PASS" start="2026-01-15T09:36:12.912734" elapsed="0.012607"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['about_link']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:05.359443" elapsed="0.275508"/>
+<status status="PASS" start="2026-01-15T09:36:12.925341" elapsed="0.228741"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-14T11:10:06.635519" level="INFO">Slept 1 second.</msg>
+<msg time="2026-01-15T09:36:14.154559" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-14T11:10:05.634951" elapsed="1.000568"/>
+<status status="PASS" start="2026-01-15T09:36:13.154082" elapsed="1.000477"/>
 </kw>
-<status status="PASS" start="2026-01-14T11:10:05.319093" elapsed="1.316426"/>
+<status status="PASS" start="2026-01-15T09:36:12.892970" elapsed="1.261589"/>
 </branch>
-<status status="PASS" start="2026-01-14T11:10:05.319093" elapsed="1.316426"/>
+<status status="PASS" start="2026-01-15T09:36:12.892970" elapsed="1.261589"/>
 </if>
-<status status="PASS" start="2026-01-14T11:10:05.209936" elapsed="1.425583"/>
+<status status="PASS" start="2026-01-15T09:36:12.754563" elapsed="1.399996"/>
 </kw>
 <kw name="Verify Sidebar Options" owner="keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['item_link']}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.638291" elapsed="0.029881"/>
+<status status="PASS" start="2026-01-15T09:36:14.156580" elapsed="0.035247"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:06.692611" level="INFO">Element 'class=bm-menu-wrap' contains text 'All Items'.</msg>
+<msg time="2026-01-15T09:36:14.240969" level="INFO">Element 'class=bm-menu-wrap' contains text 'All Items'.</msg>
 <arg>${locators['menu_container']}</arg>
 <arg>${option}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.668677" elapsed="0.023934"/>
+<status status="PASS" start="2026-01-15T09:36:14.191827" elapsed="0.049142"/>
 </kw>
 <var name="${option}">All Items</var>
-<status status="PASS" start="2026-01-14T11:10:06.668677" elapsed="0.023934"/>
+<status status="PASS" start="2026-01-15T09:36:14.191827" elapsed="0.049142"/>
 </iter>
 <iter>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:06.708261" level="INFO">Element 'class=bm-menu-wrap' contains text 'About'.</msg>
+<msg time="2026-01-15T09:36:14.254597" level="INFO">Element 'class=bm-menu-wrap' contains text 'About'.</msg>
 <arg>${locators['menu_container']}</arg>
 <arg>${option}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.692611" elapsed="0.015650"/>
+<status status="PASS" start="2026-01-15T09:36:14.240969" elapsed="0.013628"/>
 </kw>
 <var name="${option}">About</var>
-<status status="PASS" start="2026-01-14T11:10:06.692611" elapsed="0.015650"/>
+<status status="PASS" start="2026-01-15T09:36:14.240969" elapsed="0.013628"/>
 </iter>
 <iter>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:06.727447" level="INFO">Element 'class=bm-menu-wrap' contains text 'Logout'.</msg>
+<msg time="2026-01-15T09:36:14.270235" level="INFO">Element 'class=bm-menu-wrap' contains text 'Logout'.</msg>
 <arg>${locators['menu_container']}</arg>
 <arg>${option}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.708261" elapsed="0.019186"/>
+<status status="PASS" start="2026-01-15T09:36:14.254597" elapsed="0.015638"/>
 </kw>
 <var name="${option}">Logout</var>
-<status status="PASS" start="2026-01-14T11:10:06.708261" elapsed="0.019186"/>
+<status status="PASS" start="2026-01-15T09:36:14.254597" elapsed="0.015638"/>
 </iter>
 <iter>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:06.740880" level="INFO">Element 'class=bm-menu-wrap' contains text 'Reset App State'.</msg>
+<msg time="2026-01-15T09:36:14.286221" level="INFO">Element 'class=bm-menu-wrap' contains text 'Reset App State'.</msg>
 <arg>${locators['menu_container']}</arg>
 <arg>${option}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.727447" elapsed="0.013433"/>
+<status status="PASS" start="2026-01-15T09:36:14.270235" elapsed="0.015986"/>
 </kw>
 <var name="${option}">Reset App State</var>
-<status status="PASS" start="2026-01-14T11:10:06.727447" elapsed="0.013433"/>
+<status status="PASS" start="2026-01-15T09:36:14.270235" elapsed="0.015986"/>
 </iter>
 <var>${option}</var>
 <value>@{menu_labels}</value>
-<status status="PASS" start="2026-01-14T11:10:06.668172" elapsed="0.072708"/>
+<status status="PASS" start="2026-01-15T09:36:14.191827" elapsed="0.094394"/>
 </for>
-<status status="PASS" start="2026-01-14T11:10:06.638291" elapsed="0.102589"/>
+<status status="PASS" start="2026-01-15T09:36:14.154559" elapsed="0.131662"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:06.740880" level="INFO">Clicking element 'id=inventory_sidebar_link'.</msg>
+<msg time="2026-01-15T09:36:14.286221" level="INFO">Clicking element 'id=inventory_sidebar_link'.</msg>
 <arg>${locators['item_link']}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.740880" elapsed="0.072934"/>
+<status status="PASS" start="2026-01-15T09:36:14.286221" elapsed="0.073181"/>
 </kw>
 <kw name="Wait Until Location Is" owner="SeleniumLibrary">
 <arg>${URL}inventory.html</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.814878" elapsed="0.005997"/>
+<status status="PASS" start="2026-01-15T09:36:14.360410" elapsed="0.005996"/>
 </kw>
 <kw name="Open Sidebar Menu" owner="keywords">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:06.857074" level="INFO">Element 'id=logout_sidebar_link' is displayed.</msg>
+<msg time="2026-01-15T09:36:14.384002" level="INFO">Element 'id=logout_sidebar_link' is displayed.</msg>
 <arg>${locators['logout_link']}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.821874" elapsed="0.035200"/>
+<status status="PASS" start="2026-01-15T09:36:14.368427" elapsed="0.015575"/>
 </kw>
-<msg time="2026-01-14T11:10:06.858111" level="INFO">${is_open} = True</msg>
+<msg time="2026-01-15T09:36:14.384983" level="INFO">${is_open} = True</msg>
 <var>${is_open}</var>
 <arg>Element Should Be Visible</arg>
 <arg>${locators['logout_link']}</arg>
 <doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.821874" elapsed="0.036237"/>
+<status status="PASS" start="2026-01-15T09:36:14.367426" elapsed="0.017557"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${is_open}">
@@ -187,107 +187,136 @@ Without any arguments.</msg>
 <arg>${locators['menu_btn']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-14T11:10:06.858111" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-01-15T09:36:14.384983" elapsed="0.000000"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
 <arg>document.getElementById('react-burger-menu-btn').click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" start="2026-01-14T11:10:06.858111" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-01-15T09:36:14.384983" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['about_link']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-01-14T11:10:06.859075" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-01-15T09:36:14.385976" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-14T11:10:06.859406" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-01-15T09:36:14.385976" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2026-01-14T11:10:06.858111" elapsed="0.001295"/>
+<status status="NOT RUN" start="2026-01-15T09:36:14.384983" elapsed="0.000993"/>
 </branch>
-<status status="PASS" start="2026-01-14T11:10:06.858111" elapsed="0.001295"/>
+<status status="PASS" start="2026-01-15T09:36:14.384983" elapsed="0.000993"/>
 </if>
-<status status="PASS" start="2026-01-14T11:10:06.820875" elapsed="0.038531"/>
+<status status="PASS" start="2026-01-15T09:36:14.367426" elapsed="0.018550"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:06.860482" level="INFO">Clicking element 'id=about_sidebar_link'.</msg>
+<msg time="2026-01-15T09:36:14.385976" level="INFO">Clicking element 'id=about_sidebar_link'.</msg>
 <arg>${locators['about_link']}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.859406" elapsed="0.065299"/>
+<status status="PASS" start="2026-01-15T09:36:14.385976" elapsed="0.081547"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:14.088777" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-01-14T11:10:14.089862" level="FAIL">Location did not contain 'saucelabs.com' in 7 seconds.</msg>
+<msg time="2026-01-15T09:36:21.556783" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-15T09:36:21.556783" level="FAIL">Location did not contain 'saucelabs.com' in 7 seconds.</msg>
 <arg>saucelabs.com</arg>
 <arg>timeout=7s</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="FAIL" start="2026-01-14T11:10:06.933402" elapsed="7.156460">Location did not contain 'saucelabs.com' in 7 seconds.</status>
+<status status="FAIL" start="2026-01-15T09:36:14.467523" elapsed="7.091276">Location did not contain 'saucelabs.com' in 7 seconds.</status>
 </kw>
-<msg time="2026-01-14T11:10:14.089862" level="INFO">${status} = False</msg>
+<msg time="2026-01-15T09:36:21.558799" level="INFO">${status} = False</msg>
 <var>${status}</var>
 <arg>Wait Until Location Contains</arg>
 <arg>saucelabs.com</arg>
 <arg>timeout=7s</arg>
 <doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-01-14T11:10:06.924705" elapsed="7.165157"/>
+<status status="PASS" start="2026-01-15T09:36:14.467523" elapsed="7.091276"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${status}">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:14.089862" level="INFO">Clicking element 'id=about_sidebar_link'.</msg>
+<msg time="2026-01-15T09:36:21.558799" level="INFO">Clicking element 'id=about_sidebar_link'.</msg>
 <arg>${locators['about_link']}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-14T11:10:14.089862" elapsed="6.385370"/>
+<status status="PASS" start="2026-01-15T09:36:21.558799" elapsed="9.591990"/>
 </kw>
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>saucelabs.com</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2026-01-14T11:10:20.477245" elapsed="0.027016"/>
+<status status="PASS" start="2026-01-15T09:36:31.150789" elapsed="0.051785"/>
 </kw>
-<status status="PASS" start="2026-01-14T11:10:14.089862" elapsed="6.414399"/>
+<status status="PASS" start="2026-01-15T09:36:21.558799" elapsed="9.643775"/>
 </branch>
-<status status="PASS" start="2026-01-14T11:10:14.089862" elapsed="6.414954"/>
+<status status="PASS" start="2026-01-15T09:36:21.558799" elapsed="9.643775"/>
 </if>
 <kw name="Go Back" owner="SeleniumLibrary">
 <doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2026-01-14T11:10:20.504816" elapsed="0.300692"/>
+<status status="PASS" start="2026-01-15T09:36:31.203484" elapsed="0.554025"/>
 </kw>
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>inventory.html</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2026-01-14T11:10:20.807520" elapsed="0.123321"/>
+<status status="PASS" start="2026-01-15T09:36:31.766295" elapsed="0.148623"/>
 </kw>
 <kw name="Reload Page" owner="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2026-01-14T11:10:20.931837" elapsed="0.161473"/>
+<status status="PASS" start="2026-01-15T09:36:31.914918" elapsed="0.214522"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['menu_btn']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:21.093310" elapsed="0.080160"/>
+<status status="PASS" start="2026-01-15T09:36:32.133667" elapsed="0.086283"/>
+</kw>
+<kw name="Add Item To Cart" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locators['add_to_cart_btn']}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T09:36:32.220880" elapsed="0.028097"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-15T09:36:32.249975" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>${locators['add_to_cart_btn']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-15T09:36:32.248977" elapsed="0.093836"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locators['cart_badge']}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-15T09:36:32.342813" elapsed="0.021285"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-15T09:36:32.364098" level="INFO">Verifying element 'class=shopping_cart_badge' contains exact text '1'.</msg>
+<arg>${locators['cart_badge']}</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-01-15T09:36:32.364098" elapsed="0.017766"/>
+</kw>
+<doc>Adds the first available item to the cart and verifies the badge appears.</doc>
+<status status="PASS" start="2026-01-15T09:36:32.219950" elapsed="0.161914"/>
 </kw>
 <kw name="Reset App State And Verify Cart" owner="keywords">
 <kw name="Open Sidebar Menu" owner="keywords">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:21.289094" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-01-14T11:10:21.289094" level="FAIL">The element 'id=logout_sidebar_link' should be visible, but it is not.</msg>
+<msg time="2026-01-15T09:36:32.482916" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-15T09:36:32.482916" level="FAIL">The element 'id=logout_sidebar_link' should be visible, but it is not.</msg>
 <arg>${locators['logout_link']}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-01-14T11:10:21.175546" elapsed="0.114431">The element 'id=logout_sidebar_link' should be visible, but it is not.</status>
+<status status="FAIL" start="2026-01-15T09:36:32.383869" elapsed="0.100047">The element 'id=logout_sidebar_link' should be visible, but it is not.</status>
 </kw>
-<msg time="2026-01-14T11:10:21.289977" level="INFO">${is_open} = False</msg>
+<msg time="2026-01-15T09:36:32.483916" level="INFO">${is_open} = False</msg>
 <var>${is_open}</var>
 <arg>Element Should Be Visible</arg>
 <arg>${locators['logout_link']}</arg>
 <doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-01-14T11:10:21.175546" elapsed="0.114431"/>
+<status status="PASS" start="2026-01-15T09:36:32.382870" elapsed="0.101046"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${is_open}">
@@ -295,83 +324,83 @@ Without any arguments.</msg>
 <arg>${locators['menu_btn']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:21.291295" elapsed="0.017675"/>
+<status status="PASS" start="2026-01-15T09:36:32.484915" elapsed="0.013889"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:21.310127" level="INFO">Executing JavaScript:
+<msg time="2026-01-15T09:36:32.498804" level="INFO">Executing JavaScript:
 document.getElementById('react-burger-menu-btn').click()
 Without any arguments.</msg>
 <arg>document.getElementById('react-burger-menu-btn').click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-01-14T11:10:21.310127" elapsed="0.012206"/>
+<status status="PASS" start="2026-01-15T09:36:32.498804" elapsed="0.009017"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['about_link']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:21.322333" elapsed="0.258268"/>
+<status status="PASS" start="2026-01-15T09:36:32.507821" elapsed="0.237637"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-14T11:10:22.584560" level="INFO">Slept 1 second.</msg>
+<msg time="2026-01-15T09:36:33.746169" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-14T11:10:21.580601" elapsed="1.003959"/>
+<status status="PASS" start="2026-01-15T09:36:32.745458" elapsed="1.000711"/>
 </kw>
-<status status="PASS" start="2026-01-14T11:10:21.291295" elapsed="1.293265"/>
+<status status="PASS" start="2026-01-15T09:36:32.484915" elapsed="1.261254"/>
 </branch>
-<status status="PASS" start="2026-01-14T11:10:21.289977" elapsed="1.294583"/>
+<status status="PASS" start="2026-01-15T09:36:32.483916" elapsed="1.262253"/>
 </if>
-<status status="PASS" start="2026-01-14T11:10:21.175546" elapsed="1.409014"/>
+<status status="PASS" start="2026-01-15T09:36:32.382870" elapsed="1.363299"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['reset_link']}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:22.584560" elapsed="0.015681"/>
+<status status="PASS" start="2026-01-15T09:36:33.746169" elapsed="0.023537"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:22.600241" level="INFO">Clicking element 'id=reset_sidebar_link'.</msg>
+<msg time="2026-01-15T09:36:33.769706" level="INFO">Clicking element 'id=reset_sidebar_link'.</msg>
 <arg>${locators['reset_link']}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-14T11:10:22.600241" elapsed="0.064502"/>
+<status status="PASS" start="2026-01-15T09:36:33.769706" elapsed="0.098619"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:22.665744" level="INFO">Executing JavaScript:
+<msg time="2026-01-15T09:36:33.868325" level="INFO">Executing JavaScript:
 document.getElementById('react-burger-cross-btn').click()
 Without any arguments.</msg>
 <arg>document.getElementById('react-burger-cross-btn').click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-01-14T11:10:22.664743" elapsed="0.009568"/>
+<status status="PASS" start="2026-01-15T09:36:33.868325" elapsed="0.016244"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-14T11:10:23.175747" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-14T11:10:22.674311" elapsed="0.501436"/>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${locators['cart_badge']}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-01-15T09:36:33.885986" elapsed="0.023526"/>
 </kw>
 <kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:23.183137" level="INFO">Element 'class=shopping_cart_badge' did not exist.</msg>
+<msg time="2026-01-15T09:36:33.921624" level="INFO">Element 'class=shopping_cart_badge' did not exist.</msg>
 <arg>${locators['cart_badge']}</arg>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:23.175747" elapsed="0.007390"/>
+<status status="PASS" start="2026-01-15T09:36:33.911032" elapsed="0.010592"/>
 </kw>
-<status status="PASS" start="2026-01-14T11:10:21.174549" elapsed="2.008588"/>
+<doc>Resets the state and ensures the cart badge is removed.</doc>
+<status status="PASS" start="2026-01-15T09:36:32.382870" elapsed="1.538754"/>
 </kw>
 <kw name="Logout From App" owner="keywords">
 <kw name="Open Sidebar Menu" owner="keywords">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:23.285460" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-01-14T11:10:23.286471" level="FAIL">The element 'id=logout_sidebar_link' should be visible, but it is not.</msg>
+<msg time="2026-01-15T09:36:33.942807" level="INFO">Element 'id=logout_sidebar_link' is displayed.</msg>
 <arg>${locators['logout_link']}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-01-14T11:10:23.188425" elapsed="0.098046">The element 'id=logout_sidebar_link' should be visible, but it is not.</status>
+<status status="PASS" start="2026-01-15T09:36:33.926197" elapsed="0.016610"/>
 </kw>
-<msg time="2026-01-14T11:10:23.286471" level="INFO">${is_open} = False</msg>
+<msg time="2026-01-15T09:36:33.942807" level="INFO">${is_open} = True</msg>
 <var>${is_open}</var>
 <arg>Element Should Be Visible</arg>
 <arg>${locators['logout_link']}</arg>
 <doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-01-14T11:10:23.187410" elapsed="0.099061"/>
+<status status="PASS" start="2026-01-15T09:36:33.921624" elapsed="0.021183"/>
 </kw>
 <if>
 <branch type="IF" condition="not ${is_open}">
@@ -379,67 +408,63 @@ Without any arguments.</msg>
 <arg>${locators['menu_btn']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:23.286471" elapsed="0.016441"/>
+<status status="NOT RUN" start="2026-01-15T09:36:33.944228" elapsed="0.000000"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:23.302912" level="INFO">Executing JavaScript:
-document.getElementById('react-burger-menu-btn').click()
-Without any arguments.</msg>
 <arg>document.getElementById('react-burger-menu-btn').click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-01-14T11:10:23.302912" elapsed="0.007141"/>
+<status status="NOT RUN" start="2026-01-15T09:36:33.944228" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['about_link']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:23.310053" elapsed="0.017895"/>
+<status status="NOT RUN" start="2026-01-15T09:36:33.944228" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-14T11:10:24.328489" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-14T11:10:23.327948" elapsed="1.000541"/>
+<status status="NOT RUN" start="2026-01-15T09:36:33.944228" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-01-14T11:10:23.286471" elapsed="1.042018"/>
+<status status="NOT RUN" start="2026-01-15T09:36:33.943810" elapsed="0.000418"/>
 </branch>
-<status status="PASS" start="2026-01-14T11:10:23.286471" elapsed="1.042018"/>
+<status status="PASS" start="2026-01-15T09:36:33.942807" elapsed="0.001421"/>
 </if>
-<status status="PASS" start="2026-01-14T11:10:23.187410" elapsed="1.141079"/>
+<status status="PASS" start="2026-01-15T09:36:33.921624" elapsed="0.022604"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['logout_link']}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:24.328489" elapsed="0.021591"/>
+<status status="PASS" start="2026-01-15T09:36:33.944228" elapsed="0.022292"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:24.350080" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
+<msg time="2026-01-15T09:36:33.967520" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
 <arg>${locators['logout_link']}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-14T11:10:24.350080" elapsed="0.074932"/>
+<status status="PASS" start="2026-01-15T09:36:33.966520" elapsed="0.077064"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${locators['login_btn']}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-14T11:10:24.425012" elapsed="0.022604"/>
+<status status="PASS" start="2026-01-15T09:36:34.043584" elapsed="0.018400"/>
 </kw>
-<status status="PASS" start="2026-01-14T11:10:23.183137" elapsed="1.264986"/>
+<status status="PASS" start="2026-01-15T09:36:33.921624" elapsed="0.140360"/>
 </kw>
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2026-01-14T11:10:24.452132" level="INFO">Current location is 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-01-15T09:36:34.068154" level="INFO">Current location is 'https://www.saucedemo.com/'.</msg>
 <arg>${URL}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2026-01-14T11:10:24.448123" elapsed="0.004009"/>
+<status status="PASS" start="2026-01-15T09:36:34.063068" elapsed="0.005086"/>
 </kw>
 <doc>Strict 11-step validation of the sidebar navigation.</doc>
-<status status="PASS" start="2026-01-14T11:10:04.775711" elapsed="19.676421"/>
+<status status="PASS" start="2026-01-15T09:36:12.338022" elapsed="21.730132"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-01-14T11:10:24.453132" elapsed="2.449891"/>
+<status status="PASS" start="2026-01-15T09:36:34.069154" elapsed="2.674266"/>
 </kw>
-<status status="PASS" start="2026-01-14T11:10:02.227159" elapsed="24.675864"/>
+<status status="PASS" start="2026-01-15T09:36:09.531481" elapsed="27.211939"/>
 </suite>
 <statistics>
 <total>
